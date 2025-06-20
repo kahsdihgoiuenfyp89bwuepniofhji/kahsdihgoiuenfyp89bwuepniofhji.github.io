@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Under Construction</title>
+  <link rel="stylesheet" href="css/coming-soon.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="images/webelo-logo.png" alt="Webelo Designs Logo" class="logo" />
+
+    <div class="content">
+      <h1>🚧 This Website is Under Construction</h1>
+      <p>We're building something incredible here. This site will launch once development is complete and payment is received.</p>
+
+      <div id="countdown" class="countdown"></div>
+      <p class="note">If payment isn’t received by this time, the website’s release will be delayed!!</p>
+    </div>
+
+    <footer>
+      <p>Crafted by <strong>Webelo Designs</strong></p>
+      <p><a href="https://webelodesigns.com" target="_blank">Visit Our Site</a></p>
+    </footer>
+
+    <div class="webelo-branding">Powered by Webelo Designs</div>
+  </div>
+
+  <script>
+    // Planned to release on June 27
+    const releaseDate = new Date("2025-06-27T15:00:00").getTime();
+
+    const countdownElement = document.getElementById("countdown");
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = releaseDate - now;
+
+      if (distance < 0) {
+        countdownElement.innerHTML = "The launch date has passed. Please check back later.";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `
+        <span>${days}d</span> 
+        <span>${hours}h</span> 
+        <span>${minutes}m</span> 
+        <span>${seconds}s</span>
+      `;
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>

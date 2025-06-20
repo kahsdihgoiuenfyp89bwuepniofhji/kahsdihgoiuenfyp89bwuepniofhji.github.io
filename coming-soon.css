@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 650px;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 2rem;
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.content h1 {
+  font-size: 2rem;
+  color: #60a5fa;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.countdown {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  color: #38bdf8;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: -1rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.webelo-branding {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
