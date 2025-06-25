@@ -8,18 +8,19 @@
   <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">🔥 Brennan Warner</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="https://www.youtube.com/@BrennanWarner-em6ru/videos">YouTube Channel</a></li>
-        <li><a href="about.html" class="active">About Me</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="vip-signup.html">Become a VIP</a></li>
-      </ul>
-    </nav>
-  </header>
+ <div class="hamburger" id="hamburger">☰</div>
+<header class="navbar">
+  <div class="logo">🔥 Brennan Warner</div>
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://www.youtube.com/@BrennanWarner-em6ru/videos">YouTube Channel</a></li>
+      <li><a href="about.html" class="active">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="vip-signup.html">Become a VIP</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main class="about-wrapper">
     <div class="about-box">
@@ -31,5 +32,11 @@
   <footer>
     <p>This website was created by <a href="https://webelodesigns.com">Webelo Designs</a> &copy; 2025 Brennan Warner &copy; 2025 Webelo Designs</p>
   </footer>
+
+  <script>
+  document.getElementById("hamburger").addEventListener("click", function () {
+    document.getElementById("nav-links").classList.toggle("active");
+  });
+</script>
 </body>
 </html>
