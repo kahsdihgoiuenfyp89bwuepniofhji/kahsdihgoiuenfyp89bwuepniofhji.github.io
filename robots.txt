@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /form-thankyou.html
+Disallow: /coming-soon.html
+Disallow: /gallery.html
+Disallow: /videos.html
+
+Sitemap: https://brennanwarner.com/sitemap.xml
