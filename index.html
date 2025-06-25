@@ -10,8 +10,9 @@
 <body>
   <header class="navbar">
     <div class="logo">🔥 Brennan Warner</div>
+    <div class="hamburger" id="hamburger">☰</div> 
     <nav>
-      <ul>
+      <ul id="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="https://www.youtube.com/@BrennanWarner-em6ru/videos">YouTube Channel</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -37,9 +38,14 @@
   </section>
 
   <footer>
-    <p>This website was created by<li><a href="https://webelodesigns.com">Webelo Designs</a></li> &copy; 2025 Brennan Warner &copy; 2025 Webelo Designs</p>
+    <p>This website was created by <a href="https://webelodesigns.com">Webelo Designs</a> &copy; 2025 Brennan Warner &copy; 2025 Webelo Designs</p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+    // ✅ Mobile Menu Script
+    document.getElementById("hamburger").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
