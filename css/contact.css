@@ -1,0 +1,149 @@
+:root {
+  --primary: #b00000;
+  --dark: #121212;
+  --light: #f5f5f5;
+  --accent: #ff5e5e;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/photo4.png') center/cover no-repeat;
+  color: var(--light);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--accent);
+}
+
+/* Contact Section */
+.contact-section {
+  flex: 1;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  animation: slideIn 1.2s ease-out;
+}
+
+.contact-box h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.contact-box p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.contact-box a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #000;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .contact-box {
+    padding: 1.5rem 2rem;
+  }
+
+  .contact-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-box p {
+    font-size: 1rem;
+  }
+}
